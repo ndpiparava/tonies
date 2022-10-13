@@ -3,7 +3,7 @@ import Tile from './Tile';
 
 export type BoardProps = {
   board: boardType;
-  onPress: Function;
+  onPress: () => void;
 };
 
 export type boardType = string[];
