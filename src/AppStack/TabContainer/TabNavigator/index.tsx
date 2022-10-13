@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import TabStackNavigator from '../TabStackNavigator';
 import TabIcon from '../TabIcon';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';

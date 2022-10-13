@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
 import create from 'zustand';
 
 declare type MessageIds = FormatjsIntl.Message extends {
@@ -43,11 +44,9 @@ const initialLocale = {
   language: 'en',
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const useLocaleStore = create((set: any) => ({
   ...initialLocale,
   setLanguage: (language: string) => {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
     set({ language });
   },
 }));

@@ -1,7 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { useEffect, useState } from 'react';
 import { EMPTY, USER_FIGURE, AI_FIGURE } from '../../constants';
 import { View } from 'react-native';
@@ -50,13 +46,20 @@ const Game = () => {
     setBoard(newBoard);
   };
 
-  function AIAct() {
+  const AIAct = () => {
+    /* eslint-disable @typescript-eslint/no-unsafe-member-access */
+    /* eslint-disable @typescript-eslint/no-unsafe-call */
+    /* eslint-disable @typescript-eslint/no-unsafe-assignment */
     const input = board.join('');
     const model = new TicTacToe.Model(input, AI_FIGURE);
     const recommendation = model.getRecommendation();
-    populateBoard(recommendation.index, AI_FIGURE);
+    populateBoard(recommendation.index as number, AI_FIGURE);
     setAITurn(false);
-  }
+
+    /* eslint-enable @typescript-eslint/no-unsafe-member-access */
+    /* eslint-enable @typescript-eslint/no-unsafe-call */
+    /* eslint-enable @typescript-eslint/no-unsafe-assignment */
+  };
 
   const restart = () => {
     setBoard([EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY]);
