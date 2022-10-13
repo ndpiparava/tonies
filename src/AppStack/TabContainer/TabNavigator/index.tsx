@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import TabStackNavigator from '../TabStackNavigator';
 import TabIcon from '../TabIcon';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -5,14 +6,16 @@ import Settings from '../../../components/Settings';
 import { useTheme } from 'styled-components';
 import { useIntl } from 'react-intl';
 import { BottomTabNavigatorParamList } from '../../appstacktypes';
+import { ThemeInterface } from '../../../themes/theme';
 
 const Tab = createBottomTabNavigator<BottomTabNavigatorParamList>();
 
 const TabNavigator = () => {
-  const theme = useTheme();
+  const theme = useTheme() as ThemeInterface;
   const intl = useIntl();
   const usersTabLabel = intl.formatMessage({ id: 'game' });
   const settingsTabLabel = intl.formatMessage({ id: 'settings' });
+
   return (
     <Tab.Navigator screenOptions={{ headerShown: false }}>
       <Tab.Screen

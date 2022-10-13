@@ -1,6 +1,6 @@
 import { useTheme } from 'styled-components';
 import { CIRCLE, CROSS } from '../../../../constants';
-import { green } from '../../../../themes/colors';
+import { ThemeInterface } from '../../../../themes/theme';
 import { Icon } from '../../../common/icon';
 
 import { ViewWrapper, TextWrapper } from './styles';
@@ -12,7 +12,8 @@ export type TileProps = {
 };
 
 const Tile = ({ onPress, value, index }: TileProps) => {
-  const theme = useTheme();
+  const theme = useTheme() as ThemeInterface;
+
   const renderContent = () => {
     switch (value) {
       case CIRCLE:

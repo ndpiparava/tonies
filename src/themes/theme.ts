@@ -1,29 +1,6 @@
 import { black, green, grey, primary, red, white } from './colors';
 
-type keyValue = {
-  [key: string]: string;
-};
-type colorsType = {
-  font: keyValue;
-  background: keyValue;
-  border: keyValue;
-  tile: keyValue;
-  tint: string;
-};
-
-type fontsType = {
-  size: keyValue;
-  weight: keyValue;
-};
-
-type themeInterface = {
-  [key: string]: {
-    colors: colorsType;
-    fonts: fontsType;
-  };
-};
-
-const themes: themeInterface = {
+export const themes = {
   default: {
     colors: {
       font: {
@@ -68,4 +45,4 @@ const themes: themeInterface = {
   },
 };
 
-export default themes;
+export type ThemeInterface = typeof themes.default;

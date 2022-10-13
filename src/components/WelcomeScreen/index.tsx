@@ -1,5 +1,5 @@
 import { useNavigation } from '@react-navigation/native';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useIntl } from 'react-intl';
 import { useLocaleStore } from '../../stores/useLocaleStore';
 import { ViewWrapper, WelcomeText, StartWrapper, StartText } from './styles';

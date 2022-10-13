@@ -5,6 +5,6 @@ export type TabStackNavigatorProps = {
 };
 
 export type BottomTabNavigatorParamList = {
-  users: TabStackNavigatorProps;
-  settings: undefined;
+  Game: TabStackNavigatorProps;
+  Settings: undefined;
 };

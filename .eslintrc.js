@@ -7,7 +7,7 @@ module.exports = {
   },
   plugins: ['@typescript-eslint'],
   rules: {
-    '@typescript-eslint/rule-name': 'error',
+    '@typescript-eslint/rule-name': 'off',
     '@typescript-eslint/object-curly-spacing': 'off',
     '@typescript-eslint/camelcase': 'off',
     '@typescript-eslint/no-explicit-any': 'off',

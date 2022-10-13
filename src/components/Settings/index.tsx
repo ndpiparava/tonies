@@ -14,7 +14,7 @@ const Settings = () => {
   const [items, setItems] = useState(defaultValues);
 
   const handleLanguageChange = (value: string | null) => {
-    useLocaleStore.getState().setLanguage(value!);
+    useLocaleStore.getState().setLanguage(value ?? 'en');
   };
 
   return (

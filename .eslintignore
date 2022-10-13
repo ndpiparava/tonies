@@ -1,2 +1,6 @@
-./metro.config.js
-./babel.config.js
+/hooks/useCachedResources.ts
+/babel.config.js
+/metro.config.js
+/src/themes/theme.d.ts
+/.eslintrc.js
+

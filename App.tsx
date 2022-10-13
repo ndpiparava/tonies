@@ -9,7 +9,7 @@ const queryClient = new QueryClient();
 import useCachedResources from './src/hooks/useCachedResources';
 import AppStack from './src/AppStack';
 import { ThemeProvider } from 'styled-components/native';
-import themes from './src/themes/theme';
+import { themes } from './src/themes/theme';
 import { messages, useLocaleStore } from './src/stores/useLocaleStore';
 
 export default function App() {
