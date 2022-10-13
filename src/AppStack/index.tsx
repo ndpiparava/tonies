@@ -8,7 +8,15 @@ const RootStackNavigator = createStackNavigator();
 const AppStack = () => {
   return (
     <NavigationContainer>
-      <></>
+      <RootStackNavigator.Navigator initialRouteName={'tabContainer'}>
+        <RootStackNavigator.Group>
+          <RootStackNavigator.Screen
+            name='tabContainer'
+            component={TabContainer}
+            options={{ headerShown: false }}
+          />
+        </RootStackNavigator.Group>
+      </RootStackNavigator.Navigator>
     </NavigationContainer>
   );
 };
