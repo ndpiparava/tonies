@@ -1,4 +1,4 @@
-import { black, grey, primary, white } from './colors';
+import { black, green, grey, primary, red, white } from './colors';
 
 type keyValue = {
   [key: string]: string;
@@ -39,11 +39,11 @@ const themes: themeInterface = {
         off: white.dark,
       },
       tile: {
-        brand: grey.brand,
-        label: grey.dark,
+        green: green.brand,
+        red: red.brand,
       },
       border: {
-        brand: grey.brand,
+        brand: green.brand,
         medium: grey.medium,
         light: grey.light,
       },

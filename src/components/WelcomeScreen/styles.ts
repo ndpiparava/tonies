@@ -17,5 +17,5 @@ export const StartWrapper = styled(TouchableOpacity)``;
 export const StartText = styled(Text)`
   text-align: center;
   font-size: ${({ theme }) => theme.fonts.size.xxlarge};
-  color: ${({ theme }) => theme.colors.font.brand};
+  color: ${({ theme }) => theme.colors.tile.green};
 `;
