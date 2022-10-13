@@ -40,7 +40,7 @@ export const messages: {
 };
 
 const initialLocale = {
-  language: 'de',
+  language: 'en',
 };
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
