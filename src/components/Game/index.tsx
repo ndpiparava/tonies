@@ -8,6 +8,7 @@ import Result from '../Result';
 import useJudgeWinner from '../../hooks/useJudgeWinner';
 import { useNavigation } from '@react-navigation/native';
 import { useIntl } from 'react-intl';
+import { useLocaleStore } from '../../stores/useLocaleStore';
 
 const Game = () => {
   const [board, setBoard] = useState<string[]>([
@@ -26,6 +27,7 @@ const Game = () => {
   const [result, setResult] = useState(EMPTY);
   const { judgeWinner } = useJudgeWinner();
   const navigation = useNavigation();
+  const language = useLocaleStore(state => state.language);
   const intl = useIntl();
 
   const title = intl.formatMessage({
@@ -35,7 +37,7 @@ const Game = () => {
 
   useEffect(() => {
     navigation.setOptions({ title: title });
-  }, []);
+  }, [language]);
 
   const populateBoard = (index: number, figure: string) => {
     if (board[index] !== EMPTY) {
